@@ -25,6 +25,10 @@
 </table>
 
 <br>
-
+<% if current_user %>
+<%= current_user.uid %><br>
 <%= link_to 'New User', new_user_path %>
-<%= button_to "Twitter", "/auth/twitter", methid: :post %>
+<%= link_to 'Log Out', logout_path, method: :delete %>
+<% else %>
+<%= button_to "Twitter", "/auth/twitter", method: :post %>
+<% end %>
