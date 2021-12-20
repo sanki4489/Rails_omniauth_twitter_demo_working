@@ -16,6 +16,10 @@ ActiveRecord::Schema.define(version: 2021_12_20_115251) do
     t.string "provider"
     t.string "uid"
     t.string "name"
+    t.string "username"
+    t.string "image"
+    t.string "token"
+    t.string "secret"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
